@@ -14,14 +14,12 @@ public class App {
         llibres[1] = l2;
 
 
-        Part[] partsl1= new Part[2];
-        Part[] partsl2= new Part[2];
+        Part[] partsl1= new Part[1];
+        Part[] partsl2= new Part[1];
         Part p1 = new Part("Part1", new Capítol[0]);
         Part p2 = new Part("Part2", new Capítol[0]);
         partsl1[0] = p1;
-        partsl1[1] = p2;
-        partsl2[0] = p1;
-        partsl2[1] = p2;
+        partsl2[0] = p2;
         Capítol[] capitols1 = new Capítol[2];
         Capítol[] capitols2 = new Capítol[2];
         Capítol c1 = new Capítol("Capítol1", new Seccio[0]);
@@ -42,8 +40,9 @@ public class App {
 
         
         // Assignar a cada llibre l'array de parts
-        l1.setParts(partsl1);
+        l1.setParts(partsl1);        
         l2.setParts(partsl2);
+
         // Assignar a cada part l'array de capítols
         p1.setCapítols(capitols1);
         p2.setCapítols(capitols2);
@@ -54,6 +53,15 @@ public class App {
         for (Llibre llibre : llibres) {
             System.out.println(llibre);
         }
+
+        //canviar part del llibre 1
+        l1.setParts(partsl2);
+
+        for (Llibre llibre : llibres) {
+            System.out.println("-------------------");
+            System.out.println(llibre);
+        }
+
 
     }
 }
