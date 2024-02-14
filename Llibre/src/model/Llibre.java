@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Arrays;
 
 public class Llibre {
     private String titol;
@@ -61,6 +62,12 @@ public class Llibre {
 
     public void setParts(Part[] parts) {
         this.parts = parts;
+    }
+
+    @Override
+    public String toString() {
+        return "Llibre [titol=" + titol + ", autor=" + autor + ", isbn=" + isbn + ", resum=" + resum + ", parts="
+                + Arrays.toString(parts) + "]";
     }
 
     

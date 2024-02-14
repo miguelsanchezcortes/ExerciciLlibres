@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Arrays;
 
 public class Capítol {
     private String index;
@@ -28,6 +29,11 @@ public class Capítol {
 
     public void setSeccions(Seccio[] seccions) {
         this.seccions = seccions;
+    }
+
+    @Override
+    public String toString() {
+        return "Capítol [index=" + index + ", seccions=" + Arrays.toString(seccions) + "]";
     }
 
     

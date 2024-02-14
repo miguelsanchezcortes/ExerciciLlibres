@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Arrays;
 
 public class Part {
     private String nom;
@@ -28,6 +29,11 @@ public class Part {
 
     public void setCapítols(Capítol[] capítols) {
         this.capítols = capítols;
+    }
+
+    @Override
+    public String toString() {
+        return "Part [nom=" + nom + ", capítols=" + Arrays.toString(capítols) + "]";
     }
 
     

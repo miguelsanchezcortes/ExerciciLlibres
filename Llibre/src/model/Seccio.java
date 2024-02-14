@@ -19,6 +19,11 @@ public class Seccio {
         this.text = text;
     }
 
+    @Override
+    public String toString() {
+        return "Seccio [text=" + text + "]";
+    }
+
     
 
 }
